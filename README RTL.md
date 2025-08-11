@@ -25,7 +25,8 @@ module seq_detector_1010_non_ovl (input wire clk,rst_n,x,
       C: if(x==0) next_state = A;
       else next_state = D;
       
-      D: if(x==0) next_state = A;
+   // D: if(x==0) next_state = C;   1010_Overlapping
+      D: if(x==0) next_state = A;   // 1010_Non overlapping
       else next_state = B;
       
       default: next_state = A;
